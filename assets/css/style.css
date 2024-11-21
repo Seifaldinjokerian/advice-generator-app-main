@@ -17,7 +17,7 @@
 }
 
 .container {
-  height: 100vh;
+  height: calc(100vh - 13px);
   width: 100%;
   background: var(--DarkBlue);
   color: var(--LightCyan);
@@ -98,4 +98,10 @@
   .card {
     width: 90% !important;
   }
+}
+
+.attribution {
+  background: var(--DarkBlue);
+  height: 13px;
+  color: var(--LightCyan);
 }
