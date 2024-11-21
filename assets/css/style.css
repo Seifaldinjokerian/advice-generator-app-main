@@ -1,0 +1,101 @@
+:root {
+  --NeonGreen: hsl(150, 100%, 66%);
+  --LightCyan: hsl(193, 38%, 86%);
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+  --FontSizeQuote: 28px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope/Manrope-VariableFont_wght.ttf");
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: var(--DarkBlue);
+  color: var(--LightCyan);
+  font-family: "Manrope";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    width: 500px;
+    height: 300px;
+    padding: 45px 25px;
+    background: var(--DarkGrayishBlue);
+    box-shadow: 0 0 20px var(--DarkBlue);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 800;
+    position: relative;
+
+    .adviceTitle {
+      text-transform: uppercase;
+      color: var(--NeonGreen);
+      font-size: 12px;
+      letter-spacing: 5px;
+    }
+
+    .adviceContent {
+      margin-top: 20px;
+      font-size: 27px;
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        position: relative;
+        margin: 0;
+      }
+    }
+
+    .divider {
+      margin-top: 30px;
+      position: absolute;
+      width: 85%;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .dice {
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--NeonGreen);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-50%);
+      cursor: pointer;
+      transition: 100ms ease-in-out;
+      user-select: none;
+
+      &:hover {
+        box-shadow: 0 0 20px 15px hsl(150deg 100% 66% / 30%);
+      }
+    }
+  }
+}
+
+@media (max-width: 765px) {
+  .card {
+    width: 90% !important;
+  }
+}
